@@ -31,7 +31,7 @@ func main() {
     digest := crypto.Keccak256([]byte("test"))
 
 	sig, err := s.Sign(ctx, digest)
-	if err != nil {
+    if err != nil {
         panic(err)
     }
     fmt.Printf("signature: %s", base64.StdEncoding.EncodeToString(sig))
