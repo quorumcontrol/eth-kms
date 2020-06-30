@@ -8,7 +8,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/kms"
 	"github.com/ethereum/go-ethereum/crypto"
-	ethkms "quorumcontrol.com/eth-kms"
+	ethkms "github.com/quorumcontrol/eth-kms"
 )
 
 func main() {

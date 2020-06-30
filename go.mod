@@ -1,4 +1,4 @@
-module quorumcontrol.com/eth-kms
+module github.com/quorumcontrol/eth-kms
 
 go 1.14
 
