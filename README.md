@@ -21,23 +21,22 @@ func main() {
     awsSession := session.Must(session.NewSession())
     kmsClient := kms.New(awsSession)
     
-	s, err := CreateKey(ctx, kmsClient)
-	if err != nil {
+    s, err := CreateKey(ctx, kmsClient)
+    if err != nil {
         panic(err)
     }
     // save s.KeyID for future invocations like so:
     // s := ethkms.NewSignerFromID(keyID)
-
+    
     digest := crypto.Keccak256([]byte("test"))
-
+    
     sig, err := s.Sign(ctx, digest)
     if err != nil {
         panic(err)
     }
-    
+
     fmt.Printf("signature: %s", base64.StdEncoding.EncodeToString(sig))
 }
-
 ```
 
 ## Tests
